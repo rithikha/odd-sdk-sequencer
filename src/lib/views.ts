@@ -1,0 +1,1 @@
+export type BackupView = 'backup' | 'are-you-sure'
