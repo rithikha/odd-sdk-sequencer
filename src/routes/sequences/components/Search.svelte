@@ -33,7 +33,7 @@
        *
        * See the path documentation for path examples: https://docs.odd.dev/file-system-wnfs#paths
       */
-      const path = null
+      const path = odd.path.directory("public", "sequences")
 
       /**
         * TODO Check if the directory exists and create it if not.
@@ -44,7 +44,7 @@
         *
         * Use the path we created above when calling these functions.
       */
-      const exists = null
+      const exists = await fs.exists(path)
 
       if (!exists) {
         // TODO Create the sequences directory
