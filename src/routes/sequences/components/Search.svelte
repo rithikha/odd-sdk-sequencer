@@ -48,12 +48,15 @@
 
       if (!exists) {
         // TODO Create the sequences directory
-
+        await fs.mkdir(path)
         /**
          * We've created our directory locally but also want to publish it to IPFS. 
          * The file system's publish function does this for us.
         */
         await fs.publish()
+      }
+      else {
+        console.log('directory already exists')
       }
 
       /**
